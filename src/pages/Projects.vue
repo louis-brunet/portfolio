@@ -1,7 +1,7 @@
 <template>
     <q-page padding>
         <div class="page-content">
-            <h3 class="text-center">{{ $t("projects.title") }}</h3>
+            <h3 class="text-center">{{ t("projects.title") }}</h3>
 
             <div class="project-group-btns">
                 <q-btn
@@ -39,8 +39,9 @@ import dataProjectGroups from "src/data/projects.js";
 import { useMeta } from "quasar";
 import { useI18n } from "vue-i18n";
 
+const { t } = useI18n();
+
 const title = computed(() => {
-    const { t } = useI18n();
     return t("projects.title");
 });
 
@@ -56,7 +57,6 @@ function scrollToElement(id) {
 
 const projectGroups = computed(() => {
     const groups = [];
-    const { t } = useI18n();
 
     for (const [groupId, projectInfoArr] of Object.entries(dataProjectGroups)) {
         const group = {

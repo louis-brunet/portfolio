@@ -1,7 +1,7 @@
 <template>
     <q-page padding>
         <div class="page-content">
-            <h3 class="text-center">{{ $t("work.title") }}</h3>
+            <h3 class="text-center">{{ t("work.title") }}</h3>
 
             <DatedEventList :events="workEvents" />
         </div>
@@ -14,8 +14,9 @@ import { computed } from "@vue/reactivity";
 import { useMeta } from "quasar";
 import { useI18n } from "vue-i18n";
 
+const { t } = useI18n();
+
 const title = computed(() => {
-    const { t } = useI18n();
     return t("work.title");
 });
 

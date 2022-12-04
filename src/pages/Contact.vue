@@ -1,7 +1,7 @@
 <template>
     <q-page padding>
         <div class="page-content">
-            <h3 class="text-center">{{ $t("contact.title") }}</h3>
+            <h3 class="text-center">{{ t("contact.title") }}</h3>
 
             <div class="flex column flex-center contact-info">
                 <a :href="hrefEmail">
@@ -22,8 +22,9 @@ import { computed } from "@vue/reactivity";
 import { useMeta } from "quasar";
 import { useI18n } from "vue-i18n";
 
+const { t } = useI18n();
+
 const title = computed(() => {
-    const { t } = useI18n();
     return t("contact.title");
 });
 

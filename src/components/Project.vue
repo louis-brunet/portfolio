@@ -8,9 +8,7 @@
 
         <q-card-section class="col-grow">
             <div v-if="tech?.length > 0">
-                <div class="category-title">
-                    {{ $t("projects.techUsed") }} :
-                </div>
+                <div class="category-title">{{ t("projects.techUsed") }} :</div>
                 <div class="row justify-around">
                     <q-chip
                         v-for="(techItem, index) in tech"
@@ -30,9 +28,7 @@
             </div>
 
             <div v-if="features?.length > 0">
-                <div class="category-title">
-                    {{ $t("projects.features") }} :
-                </div>
+                <div class="category-title">{{ t("projects.features") }} :</div>
                 <div v-for="(feature, index) in features" :key="index">
                     {{ feature }}
                 </div>
@@ -53,7 +49,7 @@
                 target="_blank"
             >
                 <q-tooltip class="bg-accent">
-                    {{ $t("projects.srcLinkTitle") }}
+                    {{ t("projects.srcLinkTitle") }}
                 </q-tooltip>
             </q-btn>
 
@@ -68,59 +64,94 @@
                 target="_blank"
             >
                 <q-tooltip class="bg-accent">
-                    {{ $t("projects.viewLinkTitle") }}
+                    {{ t("projects.viewLinkTitle") }}
                 </q-tooltip>
             </q-btn>
         </q-card-actions>
     </q-card>
 </template>
 
-<script>
+<script setup>
+import { computed } from "@vue/reactivity";
+import { useI18n } from "vue-i18n";
 import ProjectCarousel from "./ProjectCarousel.vue";
-export default {
-    name: "Project",
-    components: { ProjectCarousel },
 
-    props: {
-        title: {
-            type: String,
-            required: true,
-        },
-        srcLink: {
-            type: String,
-            default: "",
-        },
-        viewLink: {
-            type: String,
-            default: "",
-        },
-        imgs: {
-            type: Array,
-            default: () => [],
-        },
-        features: {
-            type: Array,
-            default: () => [],
-        },
-        tech: {
-            type: Array,
-            default: () => [],
-        },
+const { t } = useI18n();
+
+const props = defineProps({
+    title: {
+        type: String,
+        required: true,
     },
-
-    computed: {
-        showImgCarousel() {
-            return this.imgs.length > 0;
-        },
-
-        showBtnSection() {
-            return this.srcLink || this.viewLink;
-        },
+    srcLink: {
+        type: String,
+        default: "",
     },
-    //setup() {
-    //    return {};
-    //},
-};
+    viewLink: {
+        type: String,
+        default: "",
+    },
+    imgs: {
+        type: Array,
+        default: () => [],
+    },
+    features: {
+        type: Array,
+        default: () => [],
+    },
+    tech: {
+        type: Array,
+        default: () => [],
+    },
+});
+
+const showImgCarousel = computed(() => props.imgs.length > 0);
+const showBtnSection = computed(() => props.srcLink || props.viewLink);
+
+// export default {
+//     name: "Project",
+//     components: { ProjectCarousel },
+
+//     props: {
+//         title: {
+//             type: String,
+//             required: true,
+//         },
+//         srcLink: {
+//             type: String,
+//             default: "",
+//         },
+//         viewLink: {
+//             type: String,
+//             default: "",
+//         },
+//         imgs: {
+//             type: Array,
+//             default: () => [],
+//         },
+//         features: {
+//             type: Array,
+//             default: () => [],
+//         },
+//         tech: {
+//             type: Array,
+//             default: () => [],
+//         },
+//     },
+
+//     computed: {
+//         showImgCarousel() {
+//             return this.imgs.length > 0;
+//         },
+
+//         showBtnSection() {
+//             return this.srcLink || this.viewLink;
+//         },
+//     },
+//     //setup() {
+//     //    return {};
+//     //},
+// };
 </script>
 
 <style lang="sass">
