@@ -11,7 +11,7 @@
 
             <div class="row home-text q-mr-auto q-ml-auto">
                 <p class="col-12 col-md-6 text-justify q-px-md">
-                    {{ $t("home.introduction") }}
+                    {{ t("home.introduction") }}
                     <!-- Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Nisi consequuntur minima enim nostrum quia eum? Repellendus
                     earum hic, distinctio, omnis veritatis voluptatibus,
@@ -21,7 +21,7 @@
                 </p>
 
                 <p class="col-12 col-md-6 text-justify q-px-md">
-                    {{ $t("home.status") }}
+                    {{ t("home.status") }}
                     <!-- Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Quaerat eius magnam a itaque distinctio voluptatibus
                     adipisci, unde tempora quasi ipsa aperiam nobis at ad
@@ -36,12 +36,15 @@
 <script setup>
 import TypewriterText from "components/TypewriterText.vue";
 import { useMeta } from "quasar";
+import { useI18n } from "vue-i18n";
 
 const metaData = {
     title: "Portfolio | Louis Brunet",
 };
 
 useMeta(metaData);
+
+const { t } = useI18n();
 </script>
 
 <style lang="sass" scoped>

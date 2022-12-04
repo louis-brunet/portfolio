@@ -19,9 +19,9 @@ onMounted(() => {
     }
 
     // Retrieve locale setting
-    const $i18n = useI18n();
+    const { locale } = useI18n();
     const savedLang = $q.localStorage.getItem(lsKeys.locale);
-    if (savedLang) $i18n.locale = savedLang;
+    if (savedLang) locale.value = savedLang;
 });
 
 // export default defineComponent({

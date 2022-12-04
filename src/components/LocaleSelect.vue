@@ -50,14 +50,16 @@ function optionImg(img) {
 }
 
 const { localStorage } = useQuasar();
+const i18n = useI18n({ useScope: "global" });
+
 const locale = computed({
     get() {
-        const $i18n = useI18n();
-        return $i18n.locale;
+        return i18n.locale.value;
     },
     set(l) {
+        console.log("setting localStorage locale to " + l);
         localStorage.set(localStorageKeys.locale, l);
-        $i18n.locale = l;
+        i18n.locale.value = l;
     },
 });
 
