@@ -4,7 +4,7 @@ export default {
         title: "Accueil",
         introduction:
             "Bonjour et bienvenue sur mon site portfolio. Je suis étudiant en ingénierie informatique à l'ENSIMAG (École nationale supérieure d'informatique et de mathématiques appliquées de Grenoble), avec une spécialité en ingénierie des systèmes d'informations.",
-        // status: "",
+        status: "Je suis actuellement en recherche de stage d'assistant-ingénieur d'une durée minimale de 8 semaines et dans le domaine de l'ingénierie logicielle. Je souhaite travailler dans la conception et le développement de solutions logicielles.",
     },
     resume: { title: "Curriculum Vitae" },
     projects: {
