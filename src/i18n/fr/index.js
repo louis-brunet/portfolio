@@ -53,7 +53,7 @@ export default {
                 title: "Site portfolio",
                 features: {
                     locale: "Internationalisation avec i18n.",
-                    dark: "Persistance du choix utilisateur entre le thème sombre ou le thème clair.",
+                    persistence: "Persistance des choix utilisateur : thème sombre ou thème clair, choix de langage.",
                     spa: "Single Page Application (SPA).",
                 },
             },
@@ -67,6 +67,9 @@ export default {
             },
             chess: {
                 title: "Échecs",
+                features : {
+                    local: "Interface pour jouer aux échecs à deux en local.",
+                }
             },
             zth: {
                 title: "Zero to Hero: jeu roguelike",

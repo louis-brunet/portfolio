@@ -19,7 +19,7 @@ export default Object.freeze({
         },
         {
             id: "sudoku",
-            featureIds: ["resolution", "io", "compatibility"],
+            featureIds: ["resolution", "io"],
             techIds: ["javaSwing"],
             src: "https://github.com/louis-brunet/iut/tree/main/PT21_APL2019",
             imgs: [
@@ -30,7 +30,7 @@ export default Object.freeze({
         },
         {
             id: "chess",
-            featureIds: ["compatibility"],
+            featureIds: ["local"],
             techIds: ["javaSwing"],
             src: "https://github.com/louis-brunet/code/tree/master/JAVA/eclipse/Chess2/src",
             imgs: [
@@ -43,7 +43,7 @@ export default Object.freeze({
         },
         {
             id: "zth",
-            featureIds: ["genre", "generation", "compatibility"],
+            featureIds: ["genre", "generation"],
             techIds: ["libgdx"],
             src: "https://github.com/louis-brunet/iut/tree/main/Projet-Tutore",
             imgs: [
@@ -55,7 +55,7 @@ export default Object.freeze({
         },
         {
             id: "invaders",
-            featureIds: ["classic", "scores", "compatibility"],
+            featureIds: ["classic", "scores"],
             techIds: ["javaSwing"],
             src: "https://github.com/louis-brunet/code/tree/master/JAVA/eclipse/SpaceInvaders/src",
             imgs: ["space-invaders.JPG"],
@@ -64,9 +64,9 @@ export default Object.freeze({
     web: [
         {
             id: "site",
-            featureIds: ["spa", "locale", "dark"],
+            featureIds: ["spa", "locale", "persistence"],
             techIds: ["vue", "quasar", "js", "htmlcss"],
-            src: "https://github.com/louis-brunet/louis-brunet.github.io",
+            src: "https://github.com/louis-brunet/portfolio",
             view: "/",
         },
         {
