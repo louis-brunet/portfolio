@@ -96,7 +96,7 @@ export default Object.freeze({
             id: "snake",
             featureIds: [],
             techIds: ["iutGuiLib"],
-            src: "https://dwarves.iut-fbleau.fr/git/brunet/PT11_APL2019",
+            src: "https://github.com/louis-brunet/iut/tree/main/PT11_APL2019_snake",
             imgs: [
                 "snake-start.png",
                 "snake-pause.png",
