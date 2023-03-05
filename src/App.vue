@@ -22,6 +22,7 @@ onMounted(() => {
     const { locale } = useI18n();
     const savedLang = $q.localStorage.getItem(lsKeys.locale);
     if (savedLang) locale.value = savedLang;
+    else locale.value = 'fr'; // TODO remove this when english translation is done
 });
 
 // export default defineComponent({
