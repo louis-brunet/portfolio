@@ -1,31 +1,18 @@
 export default Object.freeze({
-    web: [
-        {
-            id: "site",
-            featureIds: ["spa", "locale", "dark"],
-            techIds: ["vue", "quasar", "js", "htmlcss"],
-            src: "https://github.com/louis-brunet/louis-brunet.github.io",
-            view: "/",
-        },
-        {
-            id: "covid",
-            featureIds: ["api"],
-            techIds: ["ajax", "js", "htmlcss"],
-            src: "https://github.com/louis-brunet/iut/tree/main/covid19",
-            imgs: ["covid19_home.png", "covid19_country.png"],
-        },
-        {
-            id: "quiz",
-            featureIds: ["persistance"],
-            techIds: ["php", "mysql", "htmlcss"],
-            src: "https://github.com/louis-brunet/iut/tree/main/projet_quiz_CI",
-            imgs: ["quiz_login.png"],
-        },
-    ],
     java: [
         {
+            id: "decac",
+            featureIds: ["steps", "ima", "atari"],
+            techIds: ["maven", "antlr"],
+            src: "",
+            imgs: [
+                "decac-banner.png",
+                "decac-usage.png",
+            ],
+        },
+        {
             id: "robotsPompiers",
-            featureIds: [],
+            featureIds: ["dijkstra", "strategies"],
             techIds: ["ensimagGuiLib"],
             src: "",
             imgs: ["pompiers-simulation.gif"],
@@ -72,6 +59,29 @@ export default Object.freeze({
             techIds: ["javaSwing"],
             src: "https://github.com/louis-brunet/code/tree/master/JAVA/eclipse/SpaceInvaders/src",
             imgs: ["space-invaders.JPG"],
+        },
+    ],
+    web: [
+        {
+            id: "site",
+            featureIds: ["spa", "locale", "dark"],
+            techIds: ["vue", "quasar", "js", "htmlcss"],
+            src: "https://github.com/louis-brunet/louis-brunet.github.io",
+            view: "/",
+        },
+        {
+            id: "covid",
+            featureIds: ["api"],
+            techIds: ["ajax", "js", "htmlcss"],
+            src: "https://github.com/louis-brunet/iut/tree/main/covid19",
+            imgs: ["covid19_home.png", "covid19_country.png"],
+        },
+        {
+            id: "quiz",
+            featureIds: ["persistance"],
+            techIds: ["php", "mysql", "htmlcss"],
+            src: "https://github.com/louis-brunet/iut/tree/main/projet_quiz_CI",
+            imgs: ["quiz_login.png"],
         },
     ],
     c: [

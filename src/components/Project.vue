@@ -7,6 +7,20 @@
         <q-separator />
 
         <q-card-section class="col-grow">
+            <!-- Features list -->
+            <div v-if="features?.length > 0">
+                <div class="category-title">{{ t("projects.features") }} :</div>
+                <div v-for="(feature, index) in features" :key="index">
+                    {{ feature }}
+                </div>
+            </div>
+
+            <!-- images -->
+            <div v-if="showImgCarousel">
+                <project-carousel :imgs="imgs" />
+            </div>
+
+            <!-- technologies used -->
             <div v-if="tech?.length > 0">
                 <div class="category-title">{{ t("projects.techUsed") }} :</div>
                 <div class="row justify-around">
@@ -20,17 +34,6 @@
                         {{ techItem }}
                         <!--<template v-if="index < tech.length - 1">, </template>-->
                     </q-chip>
-                </div>
-            </div>
-
-            <div v-if="showImgCarousel">
-                <project-carousel :imgs="imgs" />
-            </div>
-
-            <div v-if="features?.length > 0">
-                <div class="category-title">{{ t("projects.features") }} :</div>
-                <div v-for="(feature, index) in features" :key="index">
-                    {{ feature }}
                 </div>
             </div>
         </q-card-section>

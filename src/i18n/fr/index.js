@@ -33,6 +33,8 @@ export default {
             libgdx: "Java (bibliothèque libGDX de développement de jeux)",
             iutGuiLib: "Bibliothèque graphique C de l'IUT",
             ensimagGuiLib: "Java (bibliothèque graphique de l'école)",
+            maven: "Maven",
+            antlr: "ANTLR",
         },
         projectInfo: {
             covid: {
@@ -96,10 +98,22 @@ export default {
             },
             robotsPompiers: {
                 title: "Simulation d'affectation de robots pompiers à des incendies",
+                features: {
+                    dijkstra: "Recherche de plus court chemins selon l'algorithme de Dijkstra.",
+                    strategies: "Implémentations de plusieurs stratégies d'exctinction d'incendies.",
+                },
             },
             guiLib: {
                 title: "Bibliothèque pour la création d'une interface graphique",
             },
+            decac: {
+                title: "Compilateur de Deca, un sous-ensemble de Java",
+                features: {
+                    steps: "Implémente toutes les étapes de la compilation : vérifications syntaxique, verifications contextuelles, génération du code assembleur.",
+                    ima: "Compilation vers un langage pour IMA, un interprètre de machine abstraite.",
+                    atari: "Extension du sujet de base : possibilité de compiler pour une machine historique, l'Atari 520ST.",
+                }
+            }
         },
     },
     contact: { title: "Contact" },
