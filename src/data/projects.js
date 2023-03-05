@@ -8,6 +8,7 @@ export default Object.freeze({
             imgs: [
                 "decac-banner.png",
                 "decac-usage.png",
+                "decac-palmares-circled.png",
             ],
         },
         {
